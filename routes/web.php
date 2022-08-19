@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('contacts', 'users.contacts');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
